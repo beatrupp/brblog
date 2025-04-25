@@ -1,0 +1,3 @@
+[submodule "hugo-theme-quint"]
+	path = hugo-theme-quint
+	url = https://github.com/victoriadrake/hugo-theme-quint.git
