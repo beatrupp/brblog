@@ -4,4 +4,14 @@ title = 'Ben & Beat`s Dev Blog'
 theme = "quint"
 relativeURLs = true
 description = "Ben & Beat blog about Swift, iOS and mobile development"
+contact = "Get in touch! mailto:hi@benrudhart.com or mailto:beat@rupp.digital"
 
+[params]
+[[params.social]]
+    url = "mailto:hi@benrudhart.com"
+    icon = "/social/email.png"
+    name = "email Ben"
+[[params.social]]
+    url = "mailto:beat@rupp.digital"
+    icon = "/social/email.png"
+    name = "email Beat"
