@@ -5,6 +5,7 @@ theme = "quint"
 relativeURLs = true
 description = "Ben & Beat blog about Swift, iOS and mobile development"
 contact = "Get in touch! mailto:hi@benrudhart.com or mailto:beat@rupp.digital"
+pygmentsCodeFences = true
 
 [params]
 [[params.social]]
