@@ -3,3 +3,5 @@ languageCode = 'en-us'
 title = 'Ben & Beat`s Dev Blog'
 theme = "quint"
 relativeURLs = true
+description = "Ben & Beat blog about Swift, iOS and mobile development"
+
