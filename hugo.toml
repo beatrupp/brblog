@@ -2,4 +2,4 @@ baseURL = 'https://beatrupp.github.io/brblog/'
 languageCode = 'en-us'
 title = 'Ben & Beat`s Dev Blog'
 theme = "quint"
-relativeURLs = false
+relativeURLs = true
