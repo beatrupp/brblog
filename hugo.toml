@@ -1,4 +1,4 @@
 baseURL = 'https://beatrupp.github.io/brblog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "quint"
+title = 'Ben &amp; Beat`s Dev Blog'
+theme = "hugo-theme-quint"
