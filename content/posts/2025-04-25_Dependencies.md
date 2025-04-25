@@ -10,3 +10,15 @@ authors = ["Beat Rupp"]
 
 - Why would you invest time to update dependencies?
 - Is there an easy way?
+
+Installation
+
+```bash
+brew install swift-outdated
+```
+
+In your project directory, run the following command to check your dependencies:
+
+```bash
+swift-outdated
+```
