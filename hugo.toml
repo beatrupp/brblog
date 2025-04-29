@@ -1,7 +1,7 @@
 baseURL = 'https://beatrupp.github.io/brblog/'
 languageCode = 'en-us'
 title = 'Ben and Beats Dev blog'
-theme = 'pehtheme-hugo'
+#theme = 'pehtheme-hugo'
 
 #paginate = '6' # <- Set the desired number of posts per page
 summaryLength = '20' # <- 20 words are approximately 160 characters
