@@ -12,8 +12,7 @@ tags:
   - 3rd-party-libraries
   - security
 draft: false
-params:
-  author: Beat Rupp
+author: beat
 ---
 
 # Are you keeping up with 3rd party dependencies?

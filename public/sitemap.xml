@@ -11,7 +11,7 @@
     <loc>http://localhost:1313/brblog/categories/ios/</loc>
     <lastmod>2025-04-29T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/posts/2025/</loc>
+    <loc>http://localhost:1313/brblog/posts/2025/world-domination/</loc>
     <lastmod>2025-04-29T12:00:38+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brblog/posts/</loc>
@@ -26,7 +26,7 @@
     <loc>http://localhost:1313/brblog/tags/3rd-party-libraries/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/posts/2025/</loc>
+    <loc>http://localhost:1313/brblog/posts/2025/managing-dependencies/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brblog/tags/dependencies/</loc>

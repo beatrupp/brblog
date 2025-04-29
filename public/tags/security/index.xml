@@ -6,15 +6,13 @@
     <description>Recent content in Security on Ben and Beats Dev blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>beat@rupp.digital (Beat Rupp)</managingEditor>
-    <webMaster>beat@rupp.digital (Beat Rupp)</webMaster>
     <lastBuildDate>Fri, 25 Apr 2025 12:00:38 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/brblog/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Are you keeping up with 3rd party dependencies?</title>
-      <link>http://localhost:1313/brblog/posts/2025/</link>
-      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate><author>beat@rupp.digital (Beat Rupp)</author>
-      <guid>http://localhost:1313/brblog/posts/2025/</guid>
+      <link>http://localhost:1313/brblog/posts/2025/managing-dependencies/</link>
+      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate>
+      <guid>http://localhost:1313/brblog/posts/2025/managing-dependencies/</guid>
       <description>&lt;h1 id=&#34;are-you-keeping-up-with-3rd-party-dependencies&#34;&gt;Are you keeping up with 3rd party dependencies?&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Why would you invest time to update dependencies?&lt;/li&gt;&#xA;&lt;li&gt;Is there an easy way?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Installation&lt;/p&gt;</description>
     </item>
   </channel>

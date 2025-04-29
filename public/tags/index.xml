@@ -6,35 +6,33 @@
     <description>Recent content in Tags on Ben and Beats Dev blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <managingEditor>beat@rupp.digital (Beat Rupp)</managingEditor>
-    <webMaster>beat@rupp.digital (Beat Rupp)</webMaster>
     <lastBuildDate>Tue, 29 Apr 2025 12:00:38 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/brblog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>World-Domination</title>
       <link>http://localhost:1313/brblog/tags/world-domination/</link>
-      <pubDate>Tue, 29 Apr 2025 12:00:38 +0200</pubDate><author>beat@rupp.digital (Beat Rupp)</author>
+      <pubDate>Tue, 29 Apr 2025 12:00:38 +0200</pubDate>
       <guid>http://localhost:1313/brblog/tags/world-domination/</guid>
       <description></description>
     </item>
     <item>
       <title>3rd-Party-Libraries</title>
       <link>http://localhost:1313/brblog/tags/3rd-party-libraries/</link>
-      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate><author>beat@rupp.digital (Beat Rupp)</author>
+      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate>
       <guid>http://localhost:1313/brblog/tags/3rd-party-libraries/</guid>
       <description></description>
     </item>
     <item>
       <title>Dependencies</title>
       <link>http://localhost:1313/brblog/tags/dependencies/</link>
-      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate><author>beat@rupp.digital (Beat Rupp)</author>
+      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate>
       <guid>http://localhost:1313/brblog/tags/dependencies/</guid>
       <description></description>
     </item>
     <item>
       <title>Security</title>
       <link>http://localhost:1313/brblog/tags/security/</link>
-      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate><author>beat@rupp.digital (Beat Rupp)</author>
+      <pubDate>Fri, 25 Apr 2025 12:00:38 +0200</pubDate>
       <guid>http://localhost:1313/brblog/tags/security/</guid>
       <description></description>
     </item>

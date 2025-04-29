@@ -10,10 +10,7 @@ categories:
 tags:
   - world-domination
 draft: false
-params:
-  authors:
-    - Ben Rudhart
-    - Beat Rupp
+author: ben
 ---
 
 # On the way to World Domination!

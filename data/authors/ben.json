@@ -1,0 +1,11 @@
+{
+    "name": "Ben Rudhart",
+    "bio": "Passionate Freelance Senior Software Engineer",
+    "image": "/media/authors/nraboy.png",
+    "weight": 1,
+    "social": {
+        "twitter": "benrudhart",
+        "github": "https://www.github.com/benrudhart",
+        "website": "https://www.benrudhart.com"
+    }
+}

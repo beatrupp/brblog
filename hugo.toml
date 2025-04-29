@@ -13,12 +13,15 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 	description = 'Ben and Beats Dev Blog.'
 	mainSections = 'posts'
 
-[params.author]
+[author]
+[author.beat]
 	name = 'Beat Rupp'
 	email = 'beat@rupp.digital'
 	bio = 'Freelance iOS Developer'
 	avatar = 'images/br_avatar_padding.png'
 	twitter = 'https://twitter.com/beatrupp'
+[author.ben]
+    name = 'Ben Rudhart'
 
 [menu] # Menu management
 	[[menu.main]]
