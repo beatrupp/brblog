@@ -1,7 +1,7 @@
 ---
 title: "Are you keeping up with 3rd party dependencies?"
 date: 2025-04-25T12:00:38+02:00
-slug: /
+slug: /managing-dependencies
 description: Discover how to keep up to date
 image: images/1.jpg
 caption: Photo by Beat Rupp

@@ -5,28 +5,34 @@
     <loc>http://localhost:1313/brblog/</loc>
     <lastmod>2025-10-06T20:37:29+07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/brblog/categories/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/brblog/categories/ios/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/brblog/posts/2025/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/brblog/posts/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/brblog/tags/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/brblog/tags/world-domination/</loc>
+    <lastmod>2025-04-29T12:00:38+02:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/brblog/tags/3rd-party-libraries/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brblog/posts/2025/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/categories/</loc>
-    <lastmod>2025-04-25T12:00:38+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/brblog/tags/dependencies/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/categories/ios/</loc>
-    <lastmod>2025-04-25T12:00:38+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/brblog/posts/</loc>
-    <lastmod>2025-04-25T12:00:38+02:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/brblog/tags/security/</loc>
-    <lastmod>2025-04-25T12:00:38+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/brblog/tags/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url>
 </urlset>
