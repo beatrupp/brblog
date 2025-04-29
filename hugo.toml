@@ -13,11 +13,12 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 	description = 'Ben and Beats Dev Blog.'
 	mainSections = 'posts'
 
-#[.Site.Params.Author]
-#	name = 'Anthony Arphan'
-#	bio = 'Debitis assumenda esse dignissimos aperiam delectus maxime tenetur repudiandae dolore'
-#	avatar = '/images/nasa-astronaut-unsplash.jpg'
-#	twitter = 'https://twitter.com/insertapps'
+[params.author]
+	name = 'Beat Rupp'
+	email = 'beat@rupp.digital'
+	bio = 'Freelance iOS Developer'
+	avatar = 'images/br_avatar_padding.png'
+	twitter = 'https://twitter.com/beatrupp'
 
 [menu] # Menu management
 	[[menu.main]]
