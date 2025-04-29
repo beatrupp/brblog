@@ -20,10 +20,10 @@
     <loc>http://localhost:1313/brblog/categories/ios/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/tags/ios/</loc>
+    <loc>http://localhost:1313/brblog/posts/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/brblog/posts/</loc>
+    <loc>http://localhost:1313/brblog/tags/security/</loc>
     <lastmod>2025-04-25T12:00:38+02:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/brblog/tags/</loc>
