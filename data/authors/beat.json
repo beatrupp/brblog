@@ -1,7 +1,7 @@
 {
     "name": "Beat Rupp",
     "bio": "Freelance iOS Consultant. Sustainability. Bikes. Electric vehicles. Open Source. Coffee.",
-    "image": "/media/authors/nraboy.png",
+    "image": "/assets/images/br_avatar_padding.png",
     "weight": 1,
     "social": {
         "mastodon": "https://social.jumaru.net/@brupp",

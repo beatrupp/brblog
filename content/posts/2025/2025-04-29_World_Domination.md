@@ -1,7 +1,6 @@
 ---
 title: "On the way to World Domination!"
 date: 2025-04-29T12:00:38+02:00
-slug: /world-domination
 description: World Domination
 image: images/2.jpg
 caption: Photo by Beat Rupp

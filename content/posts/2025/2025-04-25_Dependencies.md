@@ -6,7 +6,8 @@ description: Discover how to keep up to date
 image: images/1.jpg
 caption: Photo by Beat Rupp
 categories:
-  - iOS
+  - ios
+  - development
 tags:
   - dependencies
   - 3rd-party-libraries
