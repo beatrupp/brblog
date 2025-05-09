@@ -98,7 +98,13 @@
       <div id="author-box" class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
         {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
 
-        <img class="w-20 h-20 rounded-full" src="{{ $author.image }}" alt="{{ $author.name }}">
+        {{- if $author.image }}
+
+          {{- with $image := resources.Get $author.image }}
+            <img class="w-20 h-20 rounded-full" src="{{ $image.Permalink }}" alt="{{ $author.name }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+          {{- end }}
+
+      {{- end }}
 
         <h2 class="text-xl font-bold my-4">Written by: {{ $author.name }}</h2>
 
