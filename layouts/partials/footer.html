@@ -5,11 +5,7 @@
     <div class="w-full md:w-3/5 flex flex-col space-y-4 md:pr-8 lg:pr-10">
 
       <a class="flex items-center group" href="{{ .Site.BaseURL }}">
-          {{ with $image := resources.Get "images/logo.png" }}
-          {{ $processed := $image.Fit "28x28" }}
-          <img class="rounded-lg" src="{{ $processed.RelPermalink }}" alt="Logo" width="{{ $processed.Width }}" height="{{ $processed.Height }}">
-          {{ end }}
-  
+        {{ readFile "static/images/logo.svg" | safeHTML }}
         <span class="text-2xl font-semibold uppercase">{{ .Site.Title }}</span>
       </a>
 
