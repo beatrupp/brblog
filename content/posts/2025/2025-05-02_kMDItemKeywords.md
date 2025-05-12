@@ -4,7 +4,6 @@ date: 2025-05-01
 slug: /managing-dependencies
 description: Use kMDItemKeywords to make your app findable
 image: images/posts/kMDItemKeywords.png
-caption: Photo by Beat Rupp
 categories:
   - iOS
   - development
@@ -14,9 +13,9 @@ draft: false
 author: ben
 ---
 
-## 🚀 Discover a simple yet powerful technique to make your iOS app more discoverable. 
+## 🚀 Discover a simple yet powerful spotlight technique to make your iOS app more discoverable. 
 
-Follow these steps to ensure your app appears in the iOS App Library 📚 under multiple names, not just its display name.
+Follow these steps to ensure your app appears in Spotlight and the iOS App Library 📚 under multiple names, not just its display name.
 
 ‼️ You won't find this one in Apple’s official documentation (at least not for iOS).
 
