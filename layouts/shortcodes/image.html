@@ -9,13 +9,26 @@
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $width := .Get "width" | default "" }}
+{{ $rounded := .Get "rounded" | default "false" }}
+
+{{/* Build Tailwind classes dynamically */}}
+{{ $classes := slice }}
+
+{{ if eq (lower $rounded) "true" }}
+  {{ $classes = $classes | append "rounded-full" }}
+{{ end }}
+{{ $classString := delimit $classes " " }}
 
 {{ with resources.Get $src }}
   {{ $img := . }}
   {{ if $width }}
     {{ $img = $img.Resize (printf "%sx" $width) }}
   {{ end }}
-  <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}"{{ if $width }} width="{{ $width }}"{{ end }}>
+  <img 
+    src="{{ $img.RelPermalink }}" 
+    alt="{{ $alt }}" 
+    {{ if $classString }}class="{{ $classString }}"{{ end }}
+    {{ if $width }}width="{{ $width }}" height="{{ $width }}"{{ end }}>
 {{ else }}
   <strong>Image not found: {{ $src }}</strong>
 {{ end }}

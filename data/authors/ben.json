@@ -1,11 +1,13 @@
 {
     "name": "Ben Rudhart",
     "bio": "Passionate Freelance Senior Software Engineer. Swift. Kite-Surfing. Piano.",
+    "details": "I’ve spent the last 15+ years working as a Software Engineer for all kinds of companies, from smaller startups to big corporations. I love building native apps that look great, feel smooth, and really fit the platform they’re on. I’m also passionate about sharing my knowledge and helping others write better code.",
     "image": "images/ben.jpeg",
     "weight": 1,
     "social": {
         "twitter": "benrudhart",
         "github": "benrudhart",
-        "website": "https://benrudhart.com"
+        "website": "https://benrudhart.com",
+        "linkedIn": "benrudhart"
     }
 }
