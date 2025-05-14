@@ -1,14 +1,7 @@
 ---
-title: "About"
-date: 2025-01-06
-description: About
-image: images/2.jpg
-draft: false
+date: 2025-01-01
+layout: about
 ---
 
-
-## Our Mission
-
-We are two passionate iOS developers blogging about our daily journey with Swift and mobile app development.
-
-## Our Team
+# About Us
+We are a small team of passionate software engineers who love creating native apps for  platforms. We're blogging about our daily journey with Swift and mobile app development here.

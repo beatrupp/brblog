@@ -1,0 +1,61 @@
+{{- $author := .author -}}
+
+<div class="mb-4 my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
+  <div class="author-box flex items-center space-x-4 mb-4 justify-center">
+  {{- with $author.image -}}
+    {{- $avatar := resources.Get . -}}
+    <img class="w-20 h-20 bg-black rounded-full" 
+         src="{{ if $avatar }}{{ $avatar.Permalink }}{{ else }}/{{ . }}{{ end }}" 
+         alt="{{ $author.name }} avatar"
+         {{ with $avatar }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
+  {{- end -}}
+  <h2 class="text-xl font-bold">{{ $author.name }}</h2>
+
+</div>
+  {{ with $author.social }}
+    <ul class="flex flex-wrap space-x-4 list-none justify-center" style="list-style-type:none; margin-left:0; padding-left:0;">
+      {{ with .website }}
+      <li>
+        <a class="flex items-center" style="text-decoration:none;color:#2F669F" href="https://github.com/..." target="_blank" rel="noopener">
+          <i class="fas fa-compass fa-2x"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ with .linkedIn }}
+      <li>
+        <a class="flex items-center hover:underline" style="text-decoration:none;color:#2F669F" href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </li>
+      {{ end }}
+
+
+      {{ with .github }}
+      <li>
+        <a class="flex items-center hover:underline" style="text-decoration:none;color:#2F669F" href="https://github.com/{{ . }}" target="_blank" rel="noopener">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ with .twitter }}
+      <li>
+        <a class="flex items-center decoration-auto hover:underline" style="text-decoration:none;color:#2F669F" href="https://x.com/{{ . }}" target="_blank" rel="noopener">
+          <i class="fab fa-x-twitter fa-2x"></i>
+        </a>
+      </li>
+      {{ end }}
+
+      {{ with .mastodon }}
+      <li>
+        <a class="flex items-center decoration-auto hover:underline" style="text-decoration:none;color:#2F669F" href="{{ . }}" target="_blank" rel="noopener">
+          <i class="fab fa-mastodon fa-2x"></i>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  <p class="mb-4">{{ $author.details }}</p>
+</div>
