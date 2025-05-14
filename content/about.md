@@ -1,5 +1,6 @@
 ---
 title: "About"
+layout: about
 date: 2025-01-06
 description: About
 draft: false
