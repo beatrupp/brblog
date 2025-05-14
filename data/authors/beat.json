@@ -1,8 +1,8 @@
 {
     "name": "Beat Rupp",
     "bio": "Freelance iOS Consultant. Sustainability. Bikes. Electric vehicles. Open Source. Coffee.",
-    "details": "Beat is a freelance iOS/Swift consultant based in Munich, Germany, with a passion for writing maintainable and well-tested code. With a PhD in Cellular Biology and Computational Biology from EMBL Heidelberg, he brings a unique analytical perspective to software development. He has worked with major companies including Porsche AG, Bosch eBike Systems, and Volkswagen Group, focusing on sustainable app development that adapts to rapidly changing requirements. Beat specializes in iOS development, coaching, and leading development teams.",
-    "image": "images/br_avatar_padding.png",
+    "details": "I'm a freelance iOS/Swift consultant based in Munich, Germany, with a passion for writing maintainable and well-tested code. With a PhD in Computational & Cellular Biology from EMBL Heidelberg, I have a different - some would say `analytical` - perspective to software development. I have worked with major companies including Porsche AG, Bosch eBike Systems and the Volkswagen Group, focusing on sustainable app development that adapts to rapidly changing requirements.",
+    "image": "images/beat.jpg",
     "weight": 1,
     "social": {
         "mastodon": "https://social.jumaru.net/@brupp",
