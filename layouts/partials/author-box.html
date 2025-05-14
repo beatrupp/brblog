@@ -4,8 +4,8 @@
   <div class="author-box flex items-center space-x-4 mb-4 justify-center">
   {{- with $author.image -}}
     {{- $avatar := resources.Get . -}}
-    <img class="w-20 h-20 bg-black rounded-full" 
-         src="{{ if $avatar }}{{ $avatar.Permalink }}{{ else }}/{{ . }}{{ end }}" 
+    <img class="w-20 h-20 bg-black rounded-full"
+         src="{{ if $avatar }}{{ $avatar.Permalink }}{{ else }}/{{ . }}{{ end }}"
          alt="{{ $author.name }} avatar"
          {{ with $avatar }}width="{{ .Width }}" height="{{ .Height }}"{{ end }}>
   {{- end -}}
@@ -16,7 +16,7 @@
     <ul class="flex flex-wrap space-x-4 list-none justify-center" style="list-style-type:none; margin-left:0; padding-left:0;">
       {{ with .website }}
       <li>
-        <a class="flex items-center" style="text-decoration:none;color:#2F669F" href="https://github.com/..." target="_blank" rel="noopener">
+        <a class="flex items-center" style="text-decoration:none;color:#2F669F" href="{{ . }}" target="_blank" rel="noopener">
           <i class="fas fa-compass fa-2x"></i>
         </a>
       </li>
