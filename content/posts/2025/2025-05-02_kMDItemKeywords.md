@@ -7,7 +7,7 @@ categories:
   - iOS
   - development
 tags:
-  - Spotlight
+  - feature
 draft: false
 author: ben
 ---
