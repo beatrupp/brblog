@@ -1,7 +1,6 @@
 ---
 title: "Boost App Visibility with This Secret Tip"
 date: 2025-05-01
-slug: /managing-dependencies
 description: Use kMDItemKeywords to make your app findable
 image: images/posts/kMDItemKeywords.png
 categories:
@@ -13,7 +12,7 @@ draft: false
 author: ben
 ---
 
-## 🚀 Discover a simple yet powerful spotlight technique to make your iOS app more discoverable. 
+## 🚀 Discover a simple yet powerful spotlight technique to make your iOS app more discoverable.
 
 Follow these steps to ensure your app appears in Spotlight and the iOS App Library 📚 under multiple names, not just its display name.
 
@@ -31,7 +30,7 @@ Follow these steps to ensure your app appears in Spotlight and the iOS App Libra
 - Install the app on your device or simulator and search for the new keyword via Spotlight or in your App Library
 
 
-#### 👉𝗣𝗿𝗼 𝗧𝗶𝗽: 
+#### 👉𝗣𝗿𝗼 𝗧𝗶𝗽:
 If you’re using string catalogues for your info.plist, you can easily create localized versions of this keyword list for each locale your app supports.
 
 <!-- Hint: this is using a shortcode to display the image -->
