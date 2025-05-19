@@ -9,7 +9,7 @@ Beat Rupp{{< linebreak >}}
 Sammy-Drechsel-Str. 23{{< linebreak >}}
 81737 München{{< linebreak >}}
 
-Telefon: ‭+49 156 79377677{{< linebreak >}}
+Telefon: +49 156 79377677{{< linebreak >}}
 E-Mail: beat@rupp.digital{{< linebreak >}}
 
 Umsatzsteuer-ID: Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:{{< linebreak >}}
