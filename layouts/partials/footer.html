@@ -28,6 +28,7 @@
       {{ range .Site.Menus.main }}
         <li><a class="decoration-auto hover:underline font-semibold" href="{{ .URL }}">{{ .Name }}</a></li>
       {{ end }}
+        <li><a class="decoration-auto hover:underline font-semibold" href="{{ "imprint" | relURL }}">Imprint & Privacy Policy</a></li>
     </ul>
   </div>
 
