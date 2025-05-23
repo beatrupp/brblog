@@ -5,26 +5,26 @@ layout: bare
 
 ## Imprint / Impressum
 
-Beat Rupp{{< linebreak >}}
-Sammy-Drechsel-Str. 23{{< linebreak >}}
-81737 München{{< linebreak >}}
+Beat Rupp\
+Sammy-Drechsel-Str. 23\
+81737 München\
 
-Telefon: +49 156 79377677{{< linebreak >}}
-E-Mail: beat@rupp.digital{{< linebreak >}}
+Telefon: +49 156 79377677\
+E-Mail: beat@rupp.digital\
 
-Umsatzsteuer-ID: Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:{{< linebreak >}}
+Umsatzsteuer-ID: Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:\
 DE314111377
 
-**Verantwortlich für den Inhalt** (gem. § 55 Abs. 2 RStV):{{< linebreak >}}
+**Verantwortlich für den Inhalt** (gem. § 55 Abs. 2 RStV):\
 
-Beat Rupp{{< linebreak >}}
-Sammy-Drechsel-Str. 23{{< linebreak >}}
-81737 München{{< linebreak >}}
+Beat Rupp\
+Sammy-Drechsel-Str. 23\
+81737 München\
 
-Benjamin Rudhart{{< linebreak >}}
-Burgstaller Str. 2{{< linebreak >}}
-8143 Dobl{{< linebreak >}}
-Austria{{< linebreak >}}
+Benjamin Rudhart\
+Burgstaller Str. 2\
+8143 Dobl\
+Austria\
 
 
 ### Disclaimer – rechtliche Hinweise
