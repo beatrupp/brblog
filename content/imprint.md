@@ -8,23 +8,25 @@ layout: bare
 Beat Rupp\
 Sammy-Drechsel-Str. 23\
 81737 München\
+Deutschland
 
 Telefon: +49 156 79377677\
-E-Mail: beat@rupp.digital\
+E-Mail: beat@rupp.digital
 
 Umsatzsteuer-ID: Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:\
 DE314111377
 
-**Verantwortlich für den Inhalt** (gem. § 55 Abs. 2 RStV):\
+**Verantwortlich für den Inhalt** (gem. § 55 Abs. 2 RStV):
 
 Beat Rupp\
 Sammy-Drechsel-Str. 23\
 81737 München\
+Deutschland
 
 Benjamin Rudhart\
 Burgstaller Str. 2\
 8143 Dobl\
-Austria\
+Österreich
 
 
 ### Disclaimer – rechtliche Hinweise
