@@ -1,90 +1,96 @@
-{{ define "main" }}
-{{- partial "content/breadcrumb.html" . -}}
+{{ define "main" }} {{- partial "content/breadcrumb.html" . -}}
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+    <article class="md:col-span-2 prose lg:prose-lg">
+        <header class="not-prose">
+            <h1 id="title" class="text-4xl font-bold leading-normal">
+                {{ .Title }}
+            </h1>
 
-  <article class="md:col-span-2 prose lg:prose-lg">
+            <div id="lead" class="my-6">
+                <p class="font-bold">{{ .Params.description }}</p>
+            </div>
 
-    <header class="not-prose">
+            <div id="writer" class="flex items-center space-x-4">
+                {{- $name := .Site.Params.author.name -}} {{- with $avatar :=
+                resources.Get .Site.Params.author.avatar }}
 
-      <h1 id="title" class="text-4xl font-bold leading-normal">{{ .Title }}</h1>
+                <img
+                    class="w-12 h-12 bg-black rounded-full"
+                    src="{{ $avatar.Permalink }}"
+                    alt="{{ $name }} avatar"
+                    width="{{ $avatar.Width }}"
+                    height="{{ $avatar.Height }}"
+                />
 
-      <div id="lead" class="my-6">
+                {{ end -}}
 
-        <p class="font-bold">{{ .Params.description }} </p>
+                <ul
+                    class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto"
+                >
+                    {{ $author := index .Site.Data.authors (.Params.author |
+                    default "default") }}
+                    <li class="font-semibold my-2">{{ $author.name }}</li>
 
-      </div>
+                    <li
+                        class="before:content-['•'] before:mr-2 before:opacity-50 my-2"
+                    >
+                        {{- $dateMachine := .Date | time.Format
+                        "2006-01-02T15:04:05-07:00" -}} {{- $dateHuman := .Date
+                        | time.Format ":date_long" -}}
+                        <time datetime="{{ $dateMachine }}"
+                            >{{ $dateHuman }}</time
+                        >
+                    </li>
 
-      <div id="writer" class="flex items-center space-x-4">
+                    <li
+                        class="before:content-['•'] before:mr-2 before:opacity-50 my-2"
+                    >
+                        {{ .ReadingTime }} min read
+                    </li>
+                </ul>
+            </div>
+        </header>
 
-        {{- $name := .Site.Params.author.name -}}
+        <figure id="featureimage" class="rounded-xl aspect-video">
+            {{- if .Params.image }} {{- if ( strings.HasPrefix .Params.image
+            "http" ) }}
 
-        {{- with $avatar := resources.Get .Site.Params.author.avatar }}
+            <img
+                class="rounded-lg"
+                src="{{ .Params.image }}"
+                alt="{{ .Params.title }}"
+            />
 
-        <img class="w-12 h-12 bg-black rounded-full" src="{{ $avatar.Permalink }}" alt="{{ $name }} avatar" width="{{ $avatar.Width }}" height="{{ $avatar.Height }}">
+            {{- else }} {{- with $image := resources.Get .Params.image }} {{-
+            $image := $image.Resize "750x" }}
+            <img
+                class="rounded-lg"
+                src="{{ $image.Permalink }}"
+                alt="{{ .Params.title }}"
+                width="{{ $image.Width }}"
+                height="{{ $image.Height }}"
+            />
+            {{- end }} {{- end }} {{- end }} {{- if ( isset .Params "caption" )
+            }}
+            <figcaption class="text-center italic text-xs">
+                {{ .Params.caption }}
+            </figcaption>
+            {{- end }}
+        </figure>
 
-        {{ end -}}
+        <div id="content" class="mb-14">
+            <!-- Content -->
 
-        <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+            {{- .Content -}}
 
-            {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
-          <li class="font-semibold my-2">{{ $author.name }}</li>
+            <!-- Tags list -->
 
-          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
-            {{- $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" -}}
-            {{- $dateHuman := .Date | time.Format ":date_long" -}}
-            <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-          </li>
+            {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
+        </div>
 
-          <li class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
-            {{ .ReadingTime }} min read
-          </li>
-
-        </ul>
-
-      </div>
-
-    </header>
-
-    <figure id="featureimage" class="rounded-xl aspect-video">
-
-      {{- if .Params.image }}
-
-        {{- if ( strings.HasPrefix .Params.image "http" ) }}
-
-          <img class="rounded-lg" src="{{ .Params.image }}" alt="{{ .Params.title }}">
-
-        {{- else }}
-
-          {{- with $image := resources.Get .Params.image }}
-            {{- $image := $image.Resize "750x" }}
-            <img class="rounded-lg" src="{{ $image.Permalink }}" alt="{{ .Params.title }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
-          {{- end }}
-
-        {{- end }}
-
-      {{- end }}
-
-      {{- if ( isset .Params "caption" ) }}
-        <figcaption class="text-center italic text-xs">{{ .Params.caption }}</figcaption>
-      {{- end }}
-
-    </figure>
-
-    <div id="content" class="mb-14">
-      <!-- Content -->
-
-      {{- .Content -}}
-
-      <!-- Tags list -->
-
-      {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) -}}
-
-    </div>
-
-    <footer id="content-footer" class="not-prose">
-
-<!-- --
+        <footer id="content-footer" class="not-prose">
+            <!-- --
       <div id="comment" class="border p-8 bg-zinc-100 rounded-2xl">
 
         <h2 class="text-xl font-semibold">Comment</h2>
@@ -95,88 +101,102 @@
 
       </div>
 -->
-      <div id="author-box" class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl">
-        {{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+            <div
+                id="author-box"
+                class="my-8 md:my-14 border p-8 bg-zinc-100 rounded-2xl"
+            >
+                {{ $author := index .Site.Data.authors (.Params.author | default
+                "default") }} {{- if $author.image }} {{- with $image :=
+                resources.Get $author.image }}
+                <img
+                    class="w-20 h-20 rounded-full"
+                    src="{{ $image.Permalink }}"
+                    alt="{{ $author.name }}"
+                    width="{{ $image.Width }}"
+                    height="{{ $image.Height }}"
+                />
+                {{- end }} {{- end }}
 
-        {{- if $author.image }}
+                <h2 class="text-xl font-bold my-4">
+                    Written by: {{ $author.name }}
+                </h2>
 
-          {{- with $image := resources.Get $author.image }}
-            <img class="w-20 h-20 rounded-full" src="{{ $image.Permalink }}" alt="{{ $author.name }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
-          {{- end }}
+                <p class="mb-4">{{ $author.bio }}</p>
 
-      {{- end }}
+                <ul class="flex flex-wrap space-x-4">
+                    <li>
+                        <a
+                            class="flex items-center decoration-auto hover:underline"
+                            href="{{ $author.social.website }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fas fa-compass text-[20px]"></i>
+                            <span class="ml-2">Website</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="flex items-center decoration-auto hover:underline"
+                            href="https://github.com/{{ $author.social.github }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fab fa-github text-[20px]"></i>
+                            <span class="ml-2">GitHub</span>
+                        </a>
+                    </li>
 
-        <h2 class="text-xl font-bold my-4">Written by: {{ $author.name }}</h2>
+                    {{ with $author.social.twitter }}
+                    <li>
+                        <a
+                            class="flex items-center decoration-auto hover:underline"
+                            href="https://x.com/{{ . }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fab fa-x-twitter text-[20px]"></i>
+                            <span class="ml-2">Twitter</span>
+                        </a>
+                    </li>
+                    {{ end }} {{ with $author.social.mastodon }}
+                    <li>
+                        <a
+                            class="flex items-center decoration-auto hover:underline"
+                            href="{{ . }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fab fa-mastodon text-[20px]"></i>
+                            <span class="ml-2">Mastodon</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
 
-        <p class="mb-4">{{ $author.bio }}</p>
+            {{- if .Site.RegularPages.Related . -}}
+            <div id="related-post" class="">
+                <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">
+                    Recommended for You
+                </h2>
 
-        <ul class="flex flex-wrap space-x-4">
-          <li>
-            <a class="flex items-center decoration-auto hover:underline" href="{{ $author.social.website }}" target="_blank" rel="noopener">
-              <i class="fas fa-compass text-[20px]"></i>
-              <span class="ml-2">Website</span>
-            </a>
-          </li>
-          <li>
-            <a class="flex items-center decoration-auto hover:underline" href="https://github.com/{{ $author.social.github }}" target="_blank" rel="noopener">
-              <i class="fab fa-github text-[20px]"></i>
-              <span class="ml-2">GitHub</span>
-            </a>
-          </li>
+                {{- $related := .Site.RegularPages.Related . | first 2 -}} {{-
+                with $related -}}
 
-          {{ with $author.social.twitter }}
-          <li>
-            <a class="flex items-center decoration-auto hover:underline" href="https://x.com/{{ . }}" target="_blank" rel="noopener">
-              <i class="fab fa-x-twitter text-[20px]"></i>
-              <span class="ml-2">Twitter</span>
-            </a>
-          </li>
-          {{ end }}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {{- range . }} {{- partial "content/card.html" . -}} {{- end
+                    }}
+                </div>
 
-          {{ with $author.social.mastodon }}
-          <li>
-            <a class="flex items-center decoration-auto hover:underline" href="{{ . }}" target="_blank" rel="noopener">
-              <i class="fab fa-mastodon text-[20px]"></i>
-              <span class="ml-2">Mastodon</span>
-            </a>
-          </li>
-          {{ end }}
-        </ul>
+                {{- end }}
+            </div>
+            {{- end }}
+        </footer>
+    </article>
 
-      </div>
-
-      <div id="related-post" class="">
-
-        <h2 class="text-xl md:text-2xl font-bold mb-6 md:mb-8">Recommended for You</h2>
-
-        {{- $related := .Site.RegularPages.Related . | first 2 -}}
-
-        {{- with $related -}}
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-          {{- range . }}
-
-          {{- partial "content/card.html" . -}}
-
-          {{- end }}
-
-        </div>
-
-        {{- end }}
-      </div>
-
-    </footer>
-
-  </article>
-
-  <!-- Aside -->
-  <aside class="md:col-span-1">
-
-    {{- partial "content/aside.html" . -}}
-
-  </aside>
-
+    <!-- Aside -->
+    <aside class="md:col-span-1">{{- partial "content/aside.html" . -}}</aside>
 </div>
 
 {{ end }}
