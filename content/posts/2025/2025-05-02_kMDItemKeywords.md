@@ -1,6 +1,6 @@
 ---
 title: "Boost App Visibility with This Secret Tip"
-date: 2025-05-01
+date: 2025-06-20
 description: Use kMDItemKeywords to make your app findable
 image: images/posts/kMDItemKeywords.png
 categories:
@@ -8,7 +8,7 @@ categories:
   - development
 tags:
   - feature
-draft: false
+draft: true
 author: ben
 ---
 
@@ -18,7 +18,7 @@ Follow these steps to ensure your app appears in Spotlight and the iOS App Libra
 
 ‼️ You won't find this one in Apple’s official documentation (at least not for iOS).
 
-### 1) Update Your App’s 𝗜𝗻𝗳𝗼.𝗽𝗹𝗶𝘀𝘁:
+### 1. Update Your App’s 𝗜𝗻𝗳𝗼.𝗽𝗹𝗶𝘀𝘁:
 - Add a new key **𝗸𝗠𝗗𝗜𝘁𝗲𝗺𝗞𝗲𝘆𝘄𝗼𝗿𝗱𝘀**
 - Set the type to String
 

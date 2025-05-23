@@ -1,6 +1,6 @@
 ---
 title: "Swift Package Manager’s Platforms Trap"
-date: 2025-05-22
+date: 2025-07-22
 description: Why @available is Your New Best Friend
 image: images/posts/spm_os_versions.png
 categories:
@@ -8,7 +8,7 @@ categories:
   - development
 tags:
   - feature
-draft: false
+draft: true
 author: ben
 ---
 When building Swift packages that leverage APIs from the latest OS versions, developers face a critical dilemma:
