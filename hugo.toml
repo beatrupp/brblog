@@ -1,4 +1,4 @@
-baseURL = 'https://stackedbytes.github.io/brblog/'
+baseURL = 'https://stackedbytes.github.io/blog/'
 languageCode = 'en-us'
 title = 'Stacked Bytes'
 #theme = 'pehtheme-hugo'
