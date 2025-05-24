@@ -1,7 +1,8 @@
 ---
-title: "Are you keeping up with 3rd party dependencies?"
-date: 2025-05-23
-description: Discover how to keep up to date
+title: "Code Rot is Real: Stay Fresh with Library Updates"
+date: 2025-05-24
+description: "Keeping Your Dependencies Updated to Avoid Security and Stability Pitfalls"
+slug: keeping-dependencies-updated
 image: images/posts/dependencies-title.png
 categories:
   - ios
@@ -14,17 +15,17 @@ draft: false
 author: beat
 ---
 
-# Are you keeping up with 3rd party dependencies?
-
 In the world of app development, time is never standing still. Even if your project doesn't change much, the world around it is constantly evolving. Not ony operating sytems and compilers change, but also libraries receive updates - sometimes even critical security updates - that should be
 applied rather sooner than later to protect your customer's data.
 
-Most projects depend on some 3rd party dependencies for example to simplify networking, to enable user tracking or just by incorporating [a beautiful
-UI component](https://github.com/benrudhart/AppleEffortScorePicker) that doesn't need to be written from scratch. How can you keep track of all these udates?
+Most projects depend on some third-party dependencies for example to simplify networking, to enable user tracking or just by incorporating [a beautiful
+UI component](https://github.com/benrudhart/AppleEffortScorePicker) that doesn't need to be written from scratch.
 
-Fortunately, for SPM-based projects there is a tool called [swift-outdated](https://github.com/kiliankoe/swift-outdated) that can assist you.
+How can you keep track of all this?
 
-Install it via homebrew:
+Fortunately, for Swift Package Manager-based projects there is a tool called [swift-outdated](https://github.com/kiliankoe/swift-outdated) that can assist you.
+
+Install it via [homebrew](https://brew.sh):
 
 ```bash
 brew install swift-outdated
@@ -42,4 +43,13 @@ This will show you a table such as this
 
 and list all your outdated dependencies, the currently resolved version and the latest version available in their upstream repository.
 
-It's a good practice to check the outdated dependencies from time to time, by clicking the link and going through the changesets.
+The color code of the version number gives you an idea how old the dependency is:
+
+| color| dependency "age"|
+|-------| -- |
+| white | current (it can still differ in minor or patch versions, though) |
+| green | one major version behind |
+| yellow | two major versions behind |
+| red | more than 3 major versions behind |
+
+It's good practice to check outdated dependencies from time to time by clicking their link, going through their changesets and update them.
