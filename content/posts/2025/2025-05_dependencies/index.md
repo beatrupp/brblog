@@ -15,8 +15,7 @@ draft: false
 author: beat
 ---
 
-In the world of app development, time is never standing still. Even if your project doesn't change much, the world around it is constantly evolving. Not ony operating sytems and compilers change, but also libraries receive updates - sometimes even critical security updates - that should be
-applied rather sooner than later to protect your customer's data.
+In the world of app development, time is never standing still. Even if your project doesn't change much, the world around it is constantly evolving. Not only operating sytems and compilers change, but also libraries receive updates - sometimes even critical security updates - that should be applied rather sooner than later to protect your customer's data.
 
 Most projects depend on some third-party dependencies for example to simplify networking, to enable user tracking or just by incorporating [a beautiful
 UI component](https://github.com/benrudhart/AppleEffortScorePicker) that doesn't need to be written from scratch.
