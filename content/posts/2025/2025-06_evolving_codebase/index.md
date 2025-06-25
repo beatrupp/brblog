@@ -14,18 +14,18 @@ draft: true
 author: beat
 ---
 
-Over the past years I have worked in many different code bases and have seen a lot of great solutions to problems. Along the way I also have extended my toolkit with some utilities to make the code better in places where it is not yet in its best form.
+Over the past years I have worked in many different code bases and have seen a lot of great solutions to problems. Along the way I also have embraced and adapted some of those ideas to make the code better in places where it is not yet in its best form.
 
 In this blog post I want to present a few improvements that can be applied to any code base as you dig in. The changes are small but effective in making the code more readable and more robust in the long term.
 
-## The `Tidy First` approach
+## 🧹 The `Tidy First` approach
 
 When I start to work on a new feature or a bugfix I usually do a first round of "light" cleanup of the components I'm going to touch. These changes are low risk in a sense that you don't need stellar code coverage to be safe to execute them. Rather, you rely on the compiler to be your guard rail:
 
-- Check if I can make some methods and properties private (or internal), in order to reduce the publicly visible interface of the component and thus make the boundaries of the component more clear. A simple compile run will immediately tell you whether you are allowed to do the change.
-- Check if the import statements are still reflecting the actual usage in that component, removing those that are not needed. This is important for another trick I use, see below. Again, the compiler will help you.
+- Check if I can make some methods and properties `private` (or `internal`), in order to reduce the publicly visible interface of the component and thus make the boundaries of the component more clear. A simple compile run will immediately tell you whether you are allowed to do the change.
+- Check if the `import` statements are still reflecting the actual usage in that component, removing those that are not needed. This is important for another trick I use, see below. Again, the compiler will help you.
 
-## Understanding and documenting
+## 💡 Understanding and documenting
 
 As part of understanding the existing code I write doc strings for all (or most) entities I encounter. This serves two purposes, first it forces me to really think through what a piece of code is doing and secondly, by explicitly writing it out I can figure out if for example a class is doing too many things and should be splitted up. Usually this is the case when a description takes the form of "This class does A and B and in some cases C".
 
@@ -77,11 +77,9 @@ With unit tests as your safety net in place, you can advance to more elaborate i
 
 Some use the term "primitive obsession" for it. I've seen it many times - for example with country codes - that are used throughout the code base. Instead, convert the strings to enum cases as early as possible (e.g. when receiving a country code as string from a backend) and use the enum cases in a type-safe way going forward. In the best case you'll only see the string representation of countries (e.g. `CH`, `DE`, `AT`) in one single place and not anymore thereafter as the respective enum cases will be used e.g. `.switzerland`, `.germany`, `.austria`.
 
-Bonus tip: as of iOS 16, Swift's Foundation Framework already provides a list of all ISO countries ([Locale.Region](https://developer.apple.com/documentation/foundation/locale/region-swift.struct)) that might be a good solution for your code base as well. In general it's a good idea to see what the Foundation Framwork supports, you might be able to reuse proven code instead of reinventingn your own.
+Other indications for primitive obsession that I have observed is that `String` is used for types which carry more meaning than an array of characters. For example [ISBN](https://en.wikipedia.org/wiki/ISBN) or [VIN](https://en.wikipedia.org/wiki/Vehicle_identification_number). These can be at least type-aliased as a first step to transport more semantic meaning. As a second step they can be extracted as real value objects with validation methods or throwing initialisers that guarantee proper usage of the type.
 
-Other indications for primitive obsession are that `String` is used for types which carry more meaning than an array of characters. For example ISBN or VIN. These can be at least type-aliased as a first step to transport more semantic meaning. As a second step they can be extracted as real value objects with validation methods or throwing initialisers that guarantee proper usage of the type.
-
-## Dependency injection
+## 💉 Dependency injection
 
 Another thing I check is whether dependencies are instantiated within classes and if that is the case (e.g. often seen with `NotificationCenter.defaultCenter` or `WCSession.default` or any other Apple Foundation functionality) move them at least to the class initialiser as a simple form of dependency injection. With that change you'll be able to properly unit test the class as you can inject mock dependencies via a protocol.
 
@@ -95,7 +93,7 @@ Reading through a lot of code it is much simpler when the methods are short. Lon
 
 ## A more semantic boolean negation
 
-Finally, a small gem that can increase readability is thi: The boolean negation `!` character is so small it can be overlooked easily in the context of some bigger expression it's applied to. A mini extension for the `Bool` type can make it more obvious for those occasions where a negated boolean can't be avoided:
+Finally, a small gem 💎 that can increase readability is this: The boolean negation `!` character is so small it can be overlooked easily in the context of some bigger expression it's applied to. A mini extension for the `Bool` type can make it more obvious for those occasions where a negated boolean can't be avoided:
 
 ```swift
 extension Bool {
@@ -108,6 +106,6 @@ let mybool = true
 mybool.isFalse // instead of !mybool
 ```
 
-## Conclusion
+## 🏁 Conclusion
 
 I have presented a few simple cleanup techniques that can be performed even without unit test coverage by simply letting the compiler work for you. These changes do not take much time and can be applied alongside the day-to-day work that has to be done. The more advanced improvements need decent coverage to not introduce regressions, but can significantly improve the readability of the code.
