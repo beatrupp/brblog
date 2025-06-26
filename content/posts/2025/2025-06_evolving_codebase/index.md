@@ -10,7 +10,7 @@ tags:
   - refactoring
   - legacy-code
   - software-evolution
-draft: true
+draft: false
 author: beat
 ---
 
